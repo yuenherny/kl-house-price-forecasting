@@ -1,13 +1,13 @@
 # Time Series Forecasting: House Prices in Klang Valley, Malaysia
 
-# Course Info
+## Course Info
 Name: Data Science Master's Project
 
 Code: WQD7002
 
 Title: Real Estate Price Forecasting for Purchase Decision Making
 
-# Project Structure
+## Project Structure
 1. `adr`: Architectural design records
 2. `data`: Datasets
 3. `scraper`: Web scraper for Brickz.my website
