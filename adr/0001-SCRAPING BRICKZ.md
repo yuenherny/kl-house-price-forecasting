@@ -66,3 +66,10 @@ The most primitive way is to directly cURL the HTML from the website. However, B
     - This leaves us with `selenium` and UI-based methods, where a browser is opened to access the website
 
 ### Python `selenium` library
+The `selenium` library managed to bypass the anti-bot measures by accessing the website through a browser.
+
+This approach is effective to scrape data which otherwise not available via dedicated API, via CSS selectors and clicking action. See `scraper/Scraping Brickz.ipynb` for more information.
+
+However, this process is time exhausting. For example:
+- List of projects/townships for KL region: 72m55.4s or 1h12m55.4s
+- List of transactions for KL region: 1159m17s or 19h19m17s (42.94/iteration)
