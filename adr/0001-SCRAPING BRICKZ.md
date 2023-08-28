@@ -62,7 +62,7 @@ The most primitive way is to directly cURL the HTML from the website. However, B
     }
     ```
 3. Error #3: `www.brickz.my needs to review the security of your connection before proceeding`
-    - These error suggests that the website might greet us with a CAPTCHA challenge and render JS files, hence using `requests` and its related counterparts is not enough, and the access must be done from a real web browser.
+    - These error suggests that the website might greet us with a CAPTCHA challenge and render JS files, hence using `requests` and its related counterparts is not enough, and the access must be done from a real web browser, as suggested by [this StackOverflow thread](https://stackoverflow.com/questions/74022759/site-restricting-access-to-web-scraper)
     - This leaves us with `selenium` and UI-based methods, where a browser is opened to access the website
 
-### Python `selenium`
+### Python `selenium` library

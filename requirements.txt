@@ -2,3 +2,7 @@ beautifulsoup4
 requests
 notebook
 requests-html
+selenium
+pandas
+openpyxl
+tqdm
