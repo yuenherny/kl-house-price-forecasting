@@ -49,18 +49,18 @@ As much as we want to include as much indicators as possible, the data of these 
 With the list of economic indicators, the data collection stage ensues. The following are the possible data source of economic indicators for Malaysia:
 - **Interest Rate**: [BNM OPR Decisions 2004-2023](https://www.bnm.gov.my/monetary-stability/opr-decisions)
 - **Unemployment Rate**: [DOSM Annual Unemployment Rate 1982-2021](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_labour-principalstats-annual_5)
-- **Household or Personal Income**: [DOSM Annual Mean Household Income by State 1970-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_3) or [DOSM Annual Median Household Income by State 1995-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_2) 
-- **Credit Availability**: The ease of accessing credit and mortgages from banks (Iliychovski et al., 2022; Al-Marwani, 2015).
+- **Household or Personal Income**: [DOSM Annual Mean Household Income by State (KL) 1970-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_3) or [DOSM Annual Median Household Income by State (KL) 1995-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_2) 
+- **Credit Availability**: Difficult to quantify, thus omitted.
 - **Money Supply**: [DOSM Total Money Supply 2013-2021](https://www.data.gov.my/data/ms_MY/dataset/total-money-supply)
 - **Regulation**: Difficult to quantify, thus omitted.
-- **Household Size**: No direct data found. [DOSM Number of Households by State 1995-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_1) are used instead with the assumption that the number of households increase as the household size decreases.
+- **Household Size**: No direct data found. [DOSM Number of Households by State (KL) 1995-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_1) are used instead with the assumption that the number of households increase as the household size decreases.
 - **Population Growth**: [DOSM Population by State 2016-2020](https://statsdw.dosm.gov.my/population/)
 - **Consumer Psychological Demand**: Difficult to quantify, thus omitted.
 - **Environmental Factors**: Difficult to quantify, this omitted.
-- **Social Factors**: [DOSM Violent Crime by State 2015-2018](https://statsdw.dosm.gov.my/public-safety-cont/) and [DOSM Malaysian Economic and Social Wellbeing Index 2000-2021](https://www.data.gov.my/data/ms_MY/dataset/malaysian-well-being-index)
+- **Social Factors**: [DOSM Violent Crime by State (KL) 2015-2021](https://open.dosm.gov.my/violent-property-crime/kul) and [DOSM Malaysian Economic and Social Wellbeing Index 2000-2021](https://www.data.gov.my/data/ms_MY/dataset/malaysian-well-being-index)
 - **Inflation**: [DOSM Consumer Price Index 2010-2023](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_cpi_headline_1)
 
-Now that the data sources have been identified, data collection of economic indicators and EDA can start.
+Most of the data can be downloaded into XLSX/CSV format, except the historical interest rates by BNM. Thus, the data is scraped using `selenium` as the BNM website has anti-bot mechanism.
 
 ## References
 Abidoye, R. B., Chan, A. P. C., Abidoye, F. A., & Oshodi, O. S. (2019). Predicting property price index using artificial intelligence techniques: Evidence from Hong Kong. International Journal of Housing Markets and Analysis, 12(6), 1072–1092. https://doi.org/10.1108/IJHMA-11-2018-0095
