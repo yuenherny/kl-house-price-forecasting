@@ -1,0 +1,375 @@
+Component,Sub Component,Year,Index
+Economic Well-being,Total,2000,100.0
+Economic Well-being,Total,2001,100.2
+Economic Well-being,Total,2002,101.5
+Economic Well-being,Total,2003,104.2
+Economic Well-being,Total,2004,105.8
+Economic Well-being,Total,2005,106.9
+Economic Well-being,Total,2006,110.3
+Economic Well-being,Total,2007,112.6
+Economic Well-being,Total,2008,114.4
+Economic Well-being,Total,2009,114.5
+Economic Well-being,Total,2010,116.4
+Economic Well-being,Total,2011,118.7
+Economic Well-being,Total,2012,120.6
+Economic Well-being,Total,2013,121.6
+Economic Well-being,Total,2014,122.7
+Economic Well-being,Total,2015,124.1
+Economic Well-being,Total,2016,123.0
+Economic Well-being,Total,2017,125.3
+Economic Well-being,Total,2018,127.1
+Economic Well-being,Total,2019,129.9
+Economic Well-being,Total,2020,126.0
+Economic Well-being,Total,2021,127.2
+Economic Well-being,Transportation,2000,100.0
+Economic Well-being,Transportation,2001,101.6
+Economic Well-being,Transportation,2002,102.2
+Economic Well-being,Transportation,2003,103.7
+Economic Well-being,Transportation,2004,105.3
+Economic Well-being,Transportation,2005,107.3
+Economic Well-being,Transportation,2006,108.5
+Economic Well-being,Transportation,2007,110.9
+Economic Well-being,Transportation,2008,111.7
+Economic Well-being,Transportation,2009,113.4
+Economic Well-being,Transportation,2010,115.6
+Economic Well-being,Transportation,2011,117.3
+Economic Well-being,Transportation,2012,120.1
+Economic Well-being,Transportation,2013,123.1
+Economic Well-being,Transportation,2014,123.9
+Economic Well-being,Transportation,2015,125.1
+Economic Well-being,Transportation,2016,126.2
+Economic Well-being,Transportation,2017,127.0
+Economic Well-being,Transportation,2018,132.3
+Economic Well-being,Transportation,2019,134.2
+Economic Well-being,Transportation,2020,127.2
+Economic Well-being,Transportation,2021,125.8
+Economic Well-being,Communications,2000,100.0
+Economic Well-being,Communications,2001,101.0
+Economic Well-being,Communications,2002,101.7
+Economic Well-being,Communications,2003,102.5
+Economic Well-being,Communications,2004,103.9
+Economic Well-being,Communications,2005,105.7
+Economic Well-being,Communications,2006,105.7
+Economic Well-being,Communications,2007,107.4
+Economic Well-being,Communications,2008,110.4
+Economic Well-being,Communications,2009,111.5
+Economic Well-being,Communications,2010,113.8
+Economic Well-being,Communications,2011,115.6
+Economic Well-being,Communications,2012,119.1
+Economic Well-being,Communications,2013,118.7
+Economic Well-being,Communications,2014,121.8
+Economic Well-being,Communications,2015,127.6
+Economic Well-being,Communications,2016,127.1
+Economic Well-being,Communications,2017,128.8
+Economic Well-being,Communications,2018,128.8
+Economic Well-being,Communications,2019,129.9
+Economic Well-being,Communications,2020,129.4
+Economic Well-being,Communications,2021,131.1
+Economic Well-being,Education,2000,100.0
+Economic Well-being,Education,2001,100.5
+Economic Well-being,Education,2002,100.6
+Economic Well-being,Education,2003,103.9
+Economic Well-being,Education,2004,110.6
+Economic Well-being,Education,2005,112.0
+Economic Well-being,Education,2006,113.8
+Economic Well-being,Education,2007,115.3
+Economic Well-being,Education,2008,117.1
+Economic Well-being,Education,2009,119.3
+Economic Well-being,Education,2010,120.0
+Economic Well-being,Education,2011,123.1
+Economic Well-being,Education,2012,124.1
+Economic Well-being,Education,2013,124.4
+Economic Well-being,Education,2014,125.8
+Economic Well-being,Education,2015,122.8
+Economic Well-being,Education,2016,125.6
+Economic Well-being,Education,2017,126.8
+Economic Well-being,Education,2018,128.8
+Economic Well-being,Education,2019,131.5
+Economic Well-being,Education,2020,132.2
+Economic Well-being,Education,2021,133.8
+Economic Well-being,Income and Distribution,2000,100.0
+Economic Well-being,Income and Distribution,2001,101.5
+Economic Well-being,Income and Distribution,2002,102.1
+Economic Well-being,Income and Distribution,2003,101.7
+Economic Well-being,Income and Distribution,2004,101.3
+Economic Well-being,Income and Distribution,2005,105.3
+Economic Well-being,Income and Distribution,2006,108.1
+Economic Well-being,Income and Distribution,2007,110.9
+Economic Well-being,Income and Distribution,2008,110.8
+Economic Well-being,Income and Distribution,2009,110.5
+Economic Well-being,Income and Distribution,2010,114.5
+Economic Well-being,Income and Distribution,2011,117.4
+Economic Well-being,Income and Distribution,2012,119.6
+Economic Well-being,Income and Distribution,2013,123.5
+Economic Well-being,Income and Distribution,2014,127.7
+Economic Well-being,Income and Distribution,2015,129.6
+Economic Well-being,Income and Distribution,2016,121.5
+Economic Well-being,Income and Distribution,2017,124.9
+Economic Well-being,Income and Distribution,2018,127.7
+Economic Well-being,Income and Distribution,2019,130.7
+Economic Well-being,Income and Distribution,2020,117.8
+Economic Well-being,Income and Distribution,2021,120.6
+Economic Well-being,Working Life,2000,100.0
+Economic Well-being,Working Life,2001,96.4
+Economic Well-being,Working Life,2002,101.0
+Economic Well-being,Working Life,2003,109.1
+Economic Well-being,Working Life,2004,107.9
+Economic Well-being,Working Life,2005,104.2
+Economic Well-being,Working Life,2006,115.4
+Economic Well-being,Working Life,2007,118.6
+Economic Well-being,Working Life,2008,121.9
+Economic Well-being,Working Life,2009,117.6
+Economic Well-being,Working Life,2010,118.2
+Economic Well-being,Working Life,2011,120.2
+Economic Well-being,Working Life,2012,120.1
+Economic Well-being,Working Life,2013,118.3
+Economic Well-being,Working Life,2014,114.1
+Economic Well-being,Working Life,2015,115.5
+Economic Well-being,Working Life,2016,114.9
+Economic Well-being,Working Life,2017,119.0
+Economic Well-being,Working Life,2018,117.8
+Economic Well-being,Working Life,2019,123.1
+Economic Well-being,Working Life,2020,123.4
+Economic Well-being,Working Life,2021,124.7
+Social Well-being,Total,2000,100.0
+Social Well-being,Total,2001,100.4
+Social Well-being,Total,2002,101.4
+Social Well-being,Total,2003,101.7
+Social Well-being,Total,2004,101.9
+Social Well-being,Total,2005,103.1
+Social Well-being,Total,2006,104.0
+Social Well-being,Total,2007,105.7
+Social Well-being,Total,2008,106.5
+Social Well-being,Total,2009,106.6
+Social Well-being,Total,2010,107.6
+Social Well-being,Total,2011,109.4
+Social Well-being,Total,2012,110.6
+Social Well-being,Total,2013,110.8
+Social Well-being,Total,2014,112.2
+Social Well-being,Total,2015,111.9
+Social Well-being,Total,2016,110.6
+Social Well-being,Total,2017,113.6
+Social Well-being,Total,2018,114.1
+Social Well-being,Total,2019,114.6
+Social Well-being,Total,2020,113.1
+Social Well-being,Total,2021,114.7
+Social Well-being,Housing,2000,100.0
+Social Well-being,Housing,2001,101.9
+Social Well-being,Housing,2002,106.0
+Social Well-being,Housing,2003,103.7
+Social Well-being,Housing,2004,102.2
+Social Well-being,Housing,2005,103.2
+Social Well-being,Housing,2006,104.1
+Social Well-being,Housing,2007,104.9
+Social Well-being,Housing,2008,107.0
+Social Well-being,Housing,2009,101.7
+Social Well-being,Housing,2010,103.9
+Social Well-being,Housing,2011,106.0
+Social Well-being,Housing,2012,108.0
+Social Well-being,Housing,2013,109.6
+Social Well-being,Housing,2014,111.3
+Social Well-being,Housing,2015,112.7
+Social Well-being,Housing,2016,114.1
+Social Well-being,Housing,2017,115.8
+Social Well-being,Housing,2018,117.1
+Social Well-being,Housing,2019,118.4
+Social Well-being,Housing,2020,119.6
+Social Well-being,Housing,2021,120.8
+Social Well-being,Entertainment and Recreation,2000,100.0
+Social Well-being,Entertainment and Recreation,2001,101.2
+Social Well-being,Entertainment and Recreation,2002,100.9
+Social Well-being,Entertainment and Recreation,2003,102.4
+Social Well-being,Entertainment and Recreation,2004,107.3
+Social Well-being,Entertainment and Recreation,2005,109.1
+Social Well-being,Entertainment and Recreation,2006,110.7
+Social Well-being,Entertainment and Recreation,2007,113.1
+Social Well-being,Entertainment and Recreation,2008,117.3
+Social Well-being,Entertainment and Recreation,2009,114.4
+Social Well-being,Entertainment and Recreation,2010,114.9
+Social Well-being,Entertainment and Recreation,2011,117.5
+Social Well-being,Entertainment and Recreation,2012,119.3
+Social Well-being,Entertainment and Recreation,2013,122.1
+Social Well-being,Entertainment and Recreation,2014,125.8
+Social Well-being,Entertainment and Recreation,2015,126.8
+Social Well-being,Entertainment and Recreation,2016,127.4
+Social Well-being,Entertainment and Recreation,2017,128.9
+Social Well-being,Entertainment and Recreation,2018,131.0
+Social Well-being,Entertainment and Recreation,2019,130.0
+Social Well-being,Entertainment and Recreation,2020,109.8
+Social Well-being,Entertainment and Recreation,2021,104.5
+Social Well-being,Public Safety,2000,100.0
+Social Well-being,Public Safety,2001,102.1
+Social Well-being,Public Safety,2002,103.9
+Social Well-being,Public Safety,2003,103.2
+Social Well-being,Public Safety,2004,102.7
+Social Well-being,Public Safety,2005,105.6
+Social Well-being,Public Safety,2006,102.8
+Social Well-being,Public Safety,2007,101.8
+Social Well-being,Public Safety,2008,102.1
+Social Well-being,Public Safety,2009,103.4
+Social Well-being,Public Safety,2010,107.3
+Social Well-being,Public Safety,2011,109.7
+Social Well-being,Public Safety,2012,111.4
+Social Well-being,Public Safety,2013,113.0
+Social Well-being,Public Safety,2014,116.9
+Social Well-being,Public Safety,2015,119.0
+Social Well-being,Public Safety,2016,119.0
+Social Well-being,Public Safety,2017,120.3
+Social Well-being,Public Safety,2018,122.1
+Social Well-being,Public Safety,2019,123.1
+Social Well-being,Public Safety,2020,134.1
+Social Well-being,Public Safety,2021,138.7
+Social Well-being,Social Participation,2000,100.0
+Social Well-being,Social Participation,2001,100.5
+Social Well-being,Social Participation,2002,100.9
+Social Well-being,Social Participation,2003,101.5
+Social Well-being,Social Participation,2004,102.7
+Social Well-being,Social Participation,2005,102.8
+Social Well-being,Social Participation,2006,103.9
+Social Well-being,Social Participation,2007,104.8
+Social Well-being,Social Participation,2008,105.8
+Social Well-being,Social Participation,2009,109.2
+Social Well-being,Social Participation,2010,110.7
+Social Well-being,Social Participation,2011,115.0
+Social Well-being,Social Participation,2012,114.3
+Social Well-being,Social Participation,2013,114.7
+Social Well-being,Social Participation,2014,116.9
+Social Well-being,Social Participation,2015,119.3
+Social Well-being,Social Participation,2016,122.7
+Social Well-being,Social Participation,2017,124.6
+Social Well-being,Social Participation,2018,128.1
+Social Well-being,Social Participation,2019,131.7
+Social Well-being,Social Participation,2020,132.8
+Social Well-being,Social Participation,2021,130.9
+Social Well-being,Governance,2000,100.0
+Social Well-being,Governance,2001,98.8
+Social Well-being,Governance,2002,108.4
+Social Well-being,Governance,2003,105.2
+Social Well-being,Governance,2004,102.0
+Social Well-being,Governance,2005,104.7
+Social Well-being,Governance,2006,106.7
+Social Well-being,Governance,2007,109.0
+Social Well-being,Governance,2008,109.4
+Social Well-being,Governance,2009,111.6
+Social Well-being,Governance,2010,113.9
+Social Well-being,Governance,2011,112.8
+Social Well-being,Governance,2012,117.2
+Social Well-being,Governance,2013,119.8
+Social Well-being,Governance,2014,121.8
+Social Well-being,Governance,2015,116.9
+Social Well-being,Governance,2016,107.2
+Social Well-being,Governance,2017,120.1
+Social Well-being,Governance,2018,116.5
+Social Well-being,Governance,2019,118.4
+Social Well-being,Governance,2020,117.7
+Social Well-being,Governance,2021,125.7
+Social Well-being,Culture,2000,100.0
+Social Well-being,Culture,2001,97.7
+Social Well-being,Culture,2002,98.0
+Social Well-being,Culture,2003,97.0
+Social Well-being,Culture,2004,100.4
+Social Well-being,Culture,2005,101.8
+Social Well-being,Culture,2006,104.9
+Social Well-being,Culture,2007,106.8
+Social Well-being,Culture,2008,105.8
+Social Well-being,Culture,2009,110.0
+Social Well-being,Culture,2010,111.6
+Social Well-being,Culture,2011,111.3
+Social Well-being,Culture,2012,110.1
+Social Well-being,Culture,2013,104.8
+Social Well-being,Culture,2014,110.6
+Social Well-being,Culture,2015,107.0
+Social Well-being,Culture,2016,104.2
+Social Well-being,Culture,2017,106.1
+Social Well-being,Culture,2018,104.8
+Social Well-being,Culture,2019,105.1
+Social Well-being,Culture,2020,90.2
+Social Well-being,Culture,2021,96.0
+Social Well-being,Health,2000,100.0
+Social Well-being,Health,2001,98.0
+Social Well-being,Health,2002,95.9
+Social Well-being,Health,2003,97.5
+Social Well-being,Health,2004,98.0
+Social Well-being,Health,2005,98.5
+Social Well-being,Health,2006,101.1
+Social Well-being,Health,2007,101.7
+Social Well-being,Health,2008,101.8
+Social Well-being,Health,2009,102.1
+Social Well-being,Health,2010,102.9
+Social Well-being,Health,2011,104.6
+Social Well-being,Health,2012,109.8
+Social Well-being,Health,2013,108.6
+Social Well-being,Health,2014,103.0
+Social Well-being,Health,2015,101.7
+Social Well-being,Health,2016,102.7
+Social Well-being,Health,2017,104.0
+Social Well-being,Health,2018,102.5
+Social Well-being,Health,2019,103.8
+Social Well-being,Health,2020,110.4
+Social Well-being,Health,2021,108.4
+Social Well-being,Environment,2000,100.0
+Social Well-being,Environment,2001,105.2
+Social Well-being,Environment,2002,100.1
+Social Well-being,Environment,2003,105.5
+Social Well-being,Environment,2004,103.8
+Social Well-being,Environment,2005,105.7
+Social Well-being,Environment,2006,105.3
+Social Well-being,Environment,2007,112.2
+Social Well-being,Environment,2008,111
+Social Well-being,Environment,2009,107.3
+Social Well-being,Environment,2010,102.5
+Social Well-being,Environment,2011,106.5
+Social Well-being,Environment,2012,105.9
+Social Well-being,Environment,2013,106.2
+Social Well-being,Environment,2014,104.7
+Social Well-being,Environment,2015,103.9
+Social Well-being,Environment,2016,99.9
+Social Well-being,Environment,2017,104.8
+Social Well-being,Environment,2018,106.7
+Social Well-being,Environment,2019,102.8
+Social Well-being,Environment,2020,105.6
+Social Well-being,Environment,2021,108.5
+Social Well-being,Family,2000,100
+Social Well-being,Family,2001,97.9
+Social Well-being,Family,2002,98.3
+Social Well-being,Family,2003,99.8
+Social Well-being,Family,2004,98
+Social Well-being,Family,2005,96.3
+Social Well-being,Family,2006,96.9
+Social Well-being,Family,2007,96.6
+Social Well-being,Family,2008,98.5
+Social Well-being,Family,2009,99.2
+Social Well-being,Family,2010,100.3
+Social Well-being,Family,2011,101
+Social Well-being,Family,2012,99.6
+Social Well-being,Family,2013,98.5
+Social Well-being,Family,2014,98.9
+Social Well-being,Family,2015,99.7
+Social Well-being,Family,2016,98
+Social Well-being,Family,2017,97.9
+Social Well-being,Family,2018,98.4
+Social Well-being,Family,2019,98.4
+Social Well-being,Family,2020,97.7
+Social Well-being,Family,2021,98.9
+Malaysian Well-being Index,Total,2000,100
+Malaysian Well-being Index,Total,2001,100.3
+Malaysian Well-being Index,Total,2002,101.4
+Malaysian Well-being Index,Total,2003,102.6
+Malaysian Well-being Index,Total,2004,103.3
+Malaysian Well-being Index,Total,2005,104.4
+Malaysian Well-being Index,Total,2006,106.3
+Malaysian Well-being Index,Total,2007,108.1
+Malaysian Well-being Index,Total,2008,109.3
+Malaysian Well-being Index,Total,2009,109.4
+Malaysian Well-being Index,Total,2010,110.7
+Malaysian Well-being Index,Total,2011,112.7
+Malaysian Well-being Index,Total,2012,114.2
+Malaysian Well-being Index,Total,2013,114.7
+Malaysian Well-being Index,Total,2014,115.9
+Malaysian Well-being Index,Total,2015,116.3
+Malaysian Well-being Index,Total,2016,115
+Malaysian Well-being Index,Total,2017,117.8
+Malaysian Well-being Index,Total,2018,118.8
+Malaysian Well-being Index,Total,2019,120.1
+Malaysian Well-being Index,Total,2020,117.7
+Malaysian Well-being Index,Total,2021,119.2
