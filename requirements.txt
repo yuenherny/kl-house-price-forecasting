@@ -1,8 +1,9 @@
-beautifulsoup4
-requests
+numpy
 notebook
-requests-html
-selenium
+matplotlib
 pandas
+plotly
 openpyxl
+selenium
+scikit-learn
 tqdm
