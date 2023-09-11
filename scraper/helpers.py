@@ -2,7 +2,7 @@
 import os
 from pathlib import Path
 
-ROOT_DIR = Path(os.getcwd()).parent
+ROOT_DIR = Path(__file__).parent.parent
 DATA_DIR = ROOT_DIR / 'data'
 
 def get_max_page_number_from_response(response) -> int:
