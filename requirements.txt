@@ -3,6 +3,7 @@ notebook
 matplotlib
 pandas
 plotly
+pyarrow
 openpyxl
 selenium
 scikit-learn
