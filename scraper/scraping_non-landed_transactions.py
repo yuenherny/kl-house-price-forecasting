@@ -15,7 +15,7 @@ start = time.time()
 transactions = []
 
 driver = webdriver.Chrome()
-column_names = ['project_name', 'spa_date', 'address', 'building_type', 'tenure', 'rooms', 'price_psf', 'price']
+column_names = ['project_name', 'spa_date', 'address', 'building_type', 'tenure', 'rooms', 'lot_size', 'price_psf', 'price']
 for project_name, url in tqdm(zip(df['project_name'], df['url_link']), total=len(df['url_link'])):
     
     driver.get(url)
