@@ -7,4 +7,5 @@ pyarrow
 openpyxl
 selenium
 scikit-learn
+statsmodels
 tqdm
