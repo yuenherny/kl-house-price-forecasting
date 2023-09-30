@@ -6,6 +6,8 @@ import re
 ROOT_DIR = Path(os.getcwd()).parent
 DATA_DIR = ROOT_DIR / 'data'
 RAW_DATA_DIR = DATA_DIR / 'raw'
+ASSETS_DIR = ROOT_DIR / 'assets'
+CHARTS_DIR = ROOT_DIR / 'plotly'
 
 
 def convert_mixed_fraction_to_decimal(value):
