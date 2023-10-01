@@ -1,3 +1,4 @@
+category_encoders
 kaleido
 numpy
 notebook
