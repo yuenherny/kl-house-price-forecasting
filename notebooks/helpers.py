@@ -11,6 +11,10 @@ CHARTS_DIR = ASSETS_DIR / 'plotly'
 
 MODELS_DIR = ROOT_DIR / 'models'
 OUTLIER_MODEL_DIR = MODELS_DIR / 'outlier_detection'
+ENCODER_MODEL_DIR = MODELS_DIR / 'encoding'
+FORECAST_MODEL_DIR = MODELS_DIR / 'forecasting'
+IMPUTER_MODEL_DIR = MODELS_DIR / 'imputation'
+SCALER_MODEL_DIR = MODELS_DIR / 'scaling'
 
 def convert_mixed_fraction_to_decimal(value):
     """Convert a mixed fraction to a decimal."""
