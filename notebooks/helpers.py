@@ -6,6 +6,8 @@ import re
 ROOT_DIR = Path(os.getcwd()).parent
 DATA_DIR = ROOT_DIR / 'data'
 RAW_DATA_DIR = DATA_DIR / 'raw'
+CACHE_DATA_DIR = DATA_DIR / 'cache'
+
 ASSETS_DIR = ROOT_DIR / 'assets'
 CHARTS_DIR = ASSETS_DIR / 'plotly'
 
