@@ -47,11 +47,11 @@ As much as we want to include as much indicators as possible, the data of these 
 
 ## Collecting data on the economic indicator
 With the list of economic indicators, the data collection stage ensues. The following are the possible data source of economic indicators for Malaysia:
-- **Interest Rate**: [BNM OPR Decisions 2004-2023](https://www.bnm.gov.my/monetary-stability/opr-decisions)
+- **Interest Rate**: [BNM OPR Decisions 2004-2023](https://www.bnm.gov.my/monetary-stability/opr-decisions) and [Malaysia interest rate moves since 1998 by Reuters](https://www.reuters.com/article/malaysia-economy-rates-idINKLR43945120090224)
 - **Unemployment Rate**: [DOSM Annual Unemployment Rate 1982-2021](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_labour-principalstats-annual_5)
 - **Household or Personal Income**: [DOSM Annual Mean Household Income by State (KL) 1970-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_3) or [DOSM Annual Median Household Income by State (KL) 1995-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_2) 
 - **Credit Availability**: Difficult to quantify, thus omitted.
-- **Money Supply**: [DOSM Total Money Supply 2013-2021](https://www.data.gov.my/data/ms_MY/dataset/total-money-supply)
+- **Money Supply**: [DOSM Total Money Supply 2013-2021](https://archive.data.gov.my/data/ms_MY/dataset/total-money-supply)
 - **Regulation**: Difficult to quantify, thus omitted.
 - **Household Size**: No direct data found. [DOSM Number of Households by State (KL) 1995-2022](https://open.dosm.gov.my/data-catalogue/dosm-public-economy_hiesba_timeseries_state_1) are used instead with the assumption that the number of households increase as the household size decreases.
 - **Population Growth**: [DOSM Population by State 2016-2020](https://statsdw.dosm.gov.my/population/)
