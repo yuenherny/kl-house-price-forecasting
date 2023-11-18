@@ -65,6 +65,7 @@ This dataset is integrated with economic indicators as external information, for
 For more information of the data collection process, see the [ADR](/adr/0003-DATA%20COLLECTION%20OF%20ECONOMIC%20INDICATORS.md) for more info.
 
 ## 4 – Modelling
+Upon investigation, the collected data is a pooled time-series data.
 - Classical time series: ARIMA, SARIMA, Holt’s exponential smoothing
 - Machine learning: Random forest, support vector, neural networks
 - Blocked cross validation
