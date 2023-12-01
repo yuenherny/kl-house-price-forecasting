@@ -82,7 +82,7 @@ def cross_validation_with_pipeline(pipeline: Pipeline, X_train: np.ndarray, y_tr
 
     # Cross validate the train data
     if task == 'regression':
-        scoring = ('r2', 'neg_root_mean_squared_error', 'neg_mean_absolute_percentage_error', 'neg_median_absolute_error')
+        scoring = ('r2', 'neg_mean_squared_error',  'neg_root_mean_squared_error', 'neg_mean_absolute_percentage_error', 'neg_median_absolute_error')
     elif task == 'classification':
         scoring = ('accuracy', 'balanced_accuracy', 'f1', 'precision', 'recall', 'roc_auc')
     else:
