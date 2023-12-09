@@ -15,8 +15,35 @@ The collected data from Brickz.my is a collection of purchase transactions of re
 
 Each transaction is a cross-sectional data containing other external features which could impact price per square feet. Moreover, the data is collected at different points in time. Thus, it is a panel / pooled data.
 
+However, due to the complexity of panel / pooled data, the data will be simplified to a time series data. The data will be aggregated by month, and the price per square feet will be averaged. The external features will be ignored for for time series modelling but will be used for machine learning modelling.
 
+## Time Series Modelling
 
+### Data Splitting
+
+### Data Transformation
+Aggregate data by year and month
+
+### Grid Search with Blocked Cross Validation
+
+### Model Evaluation on Test Set
+Evaluation metrics: MAE, MAPE, RMSE, MSE, R2, RMSLE, MPD, MGD, ME
+
+### Statistical Evaluation of Model Performance
+Friedman test, Iman-Davenport test, and Nemenyi post-hoc test
+
+## Machine Learning Modelling
+
+### Data Splitting
+
+### Data Transformation
+Encoding
+
+### Grid Search with K-Fold Cross Validation
+
+### Model Evaluation on Test Set
+
+### Statistical Evaluation of Model Performance
 
 # References
 1. Dielman, 1983: https://www.jstor.org/stable/2685870
