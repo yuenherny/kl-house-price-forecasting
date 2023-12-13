@@ -1,6 +1,7 @@
 import streamlit as st
 
-from time_series_forecast import plot_market_overview
+from src.about import get_about_section
+from src.sarimax_forecast import plot_market_overview
 
 st.title("Real Estate Price Forecast App")
 
@@ -30,3 +31,7 @@ with market_tab:
             plot_market_overview(in_sample_forecast_length, out_sample_forecast_length),
             use_container_width=True,
         )
+
+
+with about_tab:
+    get_about_section()
