@@ -12,4 +12,5 @@ selenium
 skops
 scikit-learn
 statsmodels
+streamlit
 tqdm
