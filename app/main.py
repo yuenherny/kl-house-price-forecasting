@@ -8,7 +8,7 @@ from src.mlp_forecast import plot_forecast_get_valuation
 
 # st.set_page_config(layout="wide")
 
-st.title("Real Estate Price Forecast App")
+st.title("Kuala Lumpur Real Estate Price Forecast App")
 
 market_tab, forecast_tab, about_tab = st.tabs(["Market Overview", "Price Forecast", "About"])
 
