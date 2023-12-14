@@ -6,7 +6,7 @@ from src.helpers import get_township, get_building_type, get_tenure
 from src.sarimax_forecast import plot_market_overview
 from src.mlp_forecast import plot_forecast_get_valuation
 
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 st.title("Real Estate Price Forecast App")
 
