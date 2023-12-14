@@ -1,6 +1,5 @@
 import datetime as dt
 import streamlit as st
-from st_aggrid import AgGrid
 
 from src.about import get_about_section
 from src.helpers import get_township, get_building_type, get_tenure
