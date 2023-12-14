@@ -1,0 +1,9 @@
+# category_encoders
+numpy
+pandas
+plotly
+pyarrow
+skops
+# scikit-learn
+statsmodels
+streamlit
