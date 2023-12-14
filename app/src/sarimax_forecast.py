@@ -1,29 +1,20 @@
-import os
-from pathlib import Path
-
 import pandas as pd
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 
+from src.helpers import get_mean_median_monthly_price_psf
 
-ROOT_DIR = Path(os.getcwd())
-APP_DIR = ROOT_DIR / 'app'
-DATA_DIR = APP_DIR / 'data'
-
-df_monthly_price_psf = pd.read_parquet(DATA_DIR / 'monthly_price_psf.parquet')
-
-mean_monthly_price_psf = df_monthly_price_psf['mean_price_psf']
-median_monthly_price_psf = df_monthly_price_psf['median_price_psf']
+mean_monthly_price_psf, median_monthly_price_psf = get_mean_median_monthly_price_psf()
 
 mean_sarimax_best_order = (2, 2, 4)
 median_sarimax_best_order = (3, 1, 1)
 
 
-def get_forecast(data, order, in_sample_forecast_length=12, out_sample_forecast_length=12):
+def _forecast_price_psf(data, order, in_sample_forecast_length=12, out_sample_forecast_length=12):
 
     train = data.iloc[:-in_sample_forecast_length]
-    val = data.iloc[-in_sample_forecast_length:]
+    # val = data.iloc[-in_sample_forecast_length:]
     total_forecast_length = in_sample_forecast_length + out_sample_forecast_length
 
     model = SARIMAX(train, order=order, freq=train.index.inferred_freq)
@@ -34,7 +25,7 @@ def get_forecast(data, order, in_sample_forecast_length=12, out_sample_forecast_
     return model_forecast['mean'], model_forecast['mean_ci_lower'], model_forecast['mean_ci_upper']
 
 
-def plot_price_psf_forecast(mean_monthly_price_psf, mean_forecast, mean_ci_lower, mean_ci_upper, median_monthly_price_psf, median_forecast, median_ci_lower, median_ci_upper):
+def _plot_price_psf_forecast(mean_monthly_price_psf, mean_forecast, mean_ci_lower, mean_ci_upper, median_monthly_price_psf, median_forecast, median_ci_lower, median_ci_upper):
     # Create Plotly figure with subplots
     fig = make_subplots(rows=1, cols=1, subplot_titles=["Mean and Median Monthly Price PSF with Prediction Intervals in Kuala Lumpur"])
 
@@ -61,6 +52,6 @@ def plot_price_psf_forecast(mean_monthly_price_psf, mean_forecast, mean_ci_lower
 
 
 def plot_market_overview(in_sample_forecast_length=12, out_sample_forecast_length=12):
-    mean_forecast, mean_ci_lower, mean_ci_upper = get_forecast(mean_monthly_price_psf, mean_sarimax_best_order, in_sample_forecast_length, out_sample_forecast_length)
-    median_forecast, median_ci_lower, median_ci_upper = get_forecast(median_monthly_price_psf, median_sarimax_best_order, in_sample_forecast_length, out_sample_forecast_length)
-    return plot_price_psf_forecast(mean_monthly_price_psf, mean_forecast, mean_ci_lower, mean_ci_upper, median_monthly_price_psf, median_forecast, median_ci_lower, median_ci_upper)
+    mean_forecast, mean_ci_lower, mean_ci_upper = _forecast_price_psf(mean_monthly_price_psf, mean_sarimax_best_order, in_sample_forecast_length, out_sample_forecast_length)
+    median_forecast, median_ci_lower, median_ci_upper = _forecast_price_psf(median_monthly_price_psf, median_sarimax_best_order, in_sample_forecast_length, out_sample_forecast_length)
+    return _plot_price_psf_forecast(mean_monthly_price_psf, mean_forecast, mean_ci_lower, mean_ci_upper, median_monthly_price_psf, median_forecast, median_ci_lower, median_ci_upper)
