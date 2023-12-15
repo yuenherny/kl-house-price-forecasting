@@ -61,27 +61,47 @@ def _plot_price_psf_forecast(combined_df, mean_monthly_price_psf, median_monthly
 
     for type in combined_df['type'].unique():
         subset_df = combined_df[combined_df['type'] == type]
-        fig.add_trace(go.Scatter(x=subset_df['date'], y=subset_df['price_psf'],
-                                mode='markers', marker=dict(color=color_map[type]),
-                                name=f'{type}'))
+        fig.add_trace(
+            go.Scatter(
+                x=subset_df['date'], 
+                y=subset_df['price_psf'],
+                mode='markers', 
+                marker=dict(color=color_map[type]),
+                name=f'{type}'
+            )
+        )
     # Line plot for mean price
     fig.add_trace(
-        go.Scatter(x=mean_monthly_price_psf.index, y=mean_monthly_price_psf.values,
-            mode='lines', line=dict(color='black'), name='Mean Price'), 
+        go.Scatter(
+            x=mean_monthly_price_psf.index, 
+            y=mean_monthly_price_psf.values,
+            mode='lines', 
+            line=dict(color='black'), 
+            name='Mean Price'
+        ), 
         secondary_y=True
     )
 
     # Line plot for median price
     fig.add_trace(
-        go.Scatter(x=median_monthly_price_psf.index, y=median_monthly_price_psf.values,
-            mode='lines', line=dict(color='purple'), name='Median Price'),
+        go.Scatter(
+            x=median_monthly_price_psf.index, 
+            y=median_monthly_price_psf.values,
+            mode='lines', 
+            line=dict(color='purple'), 
+            name='Median Price'
+        ),
         secondary_y=True
     )
 
     # Set labels and title
-    fig.update_layout(title='Price per Square Foot (PSF) of Selected Township with Kuala Lumpur Mean and Median PSF over Time ',
-                    xaxis_title='Date',
-                    yaxis_title='Price per Square Foot')
+    fig.update_layout(
+        title='Price per Square Foot (PSF) of Selected Township with Kuala Lumpur Mean and Median PSF over Time ',
+        xaxis_title='Date',
+        yaxis_title='Price per Square Foot',
+        yaxis=dict(matches='y2'), 
+        yaxis2=dict(matches='y')
+    )
 
     # Set x-axis limits based on the first and last date in combined_df
     first_date = combined_df['date'].min()
