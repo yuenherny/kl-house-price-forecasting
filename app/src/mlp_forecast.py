@@ -1,3 +1,4 @@
+from matplotlib import legend
 import pandas as pd
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
@@ -100,7 +101,15 @@ def _plot_price_psf_forecast(combined_df, mean_monthly_price_psf, median_monthly
         xaxis_title='Date',
         yaxis_title='Price per Square Foot',
         yaxis=dict(matches='y2'), 
-        yaxis2=dict(matches='y')
+        yaxis2=dict(matches='y'),
+        legend=dict(
+            title="Legend",
+            orientation="h",
+            yanchor="top",
+            xanchor="left",
+            x=0,
+            y=-0.2,
+        )
     )
 
     # Set x-axis limits based on the first and last date in combined_df

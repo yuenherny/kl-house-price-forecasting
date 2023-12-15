@@ -1,3 +1,4 @@
+from matplotlib import legend
 import pandas as pd
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
@@ -43,11 +44,12 @@ def _plot_price_psf_forecast(
         x=mean_forecast.index, y=mean_forecast, mode='lines', name='Forecasted Mean'
     ))
     fig.add_trace(go.Scatter(
-        x=mean_forecast.index, y=mean_ci_lower, fill=None, mode='lines', line=dict(color='rgba(0,0,255,0)')
+        x=mean_forecast.index, y=mean_ci_lower, fill=None, mode='lines', line=dict(color='rgba(0,0,255,0.2)'),
+        name=' Mean Price PSF Prediction Lower Interval'
     ))
     fig.add_trace(go.Scatter(
         x=mean_forecast.index, y=mean_ci_upper, fill='tonexty', mode='lines', line=dict(color='rgba(0,0,255,0.2)'), 
-        name=' Mean Price PSF Prediction Interval'
+        name=' Mean Price PSF Prediction Upper Interval'
     ))
 
     # Plot second time series and prediction interval
@@ -58,18 +60,26 @@ def _plot_price_psf_forecast(
         x=median_forecast.index, y=median_forecast, mode='lines', name='Forecasted Median'
     ))
     fig.add_trace(go.Scatter(
-        x=median_forecast.index, y=median_ci_lower, fill=None, mode='lines', line=dict(color='rgba(255,0,0,0)')
+        x=median_forecast.index, y=median_ci_lower, fill=None, mode='lines', line=dict(color='rgba(255,0,0,0.2)'),
+        name='Median Price PSF Prediction Lower Interval'
     ))
     fig.add_trace(go.Scatter(
         x=median_forecast.index, y=median_ci_upper, fill='tonexty', mode='lines', line=dict(color='rgba(255,0,0,0.2)'), 
-        name='Median Pricew PSF Prediction Interval'
+        name='Median Price PSF Prediction Upper Interval'
     ))
 
     # Update layout
     fig.update_layout(
         xaxis_title="Date", 
         yaxis_title="Price per Square Feet (RM)", 
-        legend_title="Legend",
+        legend=dict(
+            title="Legend",
+            orientation="h",
+            yanchor="top",
+            xanchor="left",
+            x=0,
+            y=-0.2,
+        )
     )
 
     return fig
