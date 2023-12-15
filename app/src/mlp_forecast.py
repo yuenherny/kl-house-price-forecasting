@@ -1,4 +1,3 @@
-from matplotlib import legend
 import pandas as pd
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots

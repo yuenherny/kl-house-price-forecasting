@@ -1,4 +1,3 @@
-import pandas as pd
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 from statsmodels.tsa.statespace.sarimax import SARIMAX
