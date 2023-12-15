@@ -42,7 +42,7 @@ with market_tab:
 
 
 with forecast_tab:
-    st.write("This app perform valuation of a real estate in Kuala Lumpur based on its attributes and economic indicators.")
+    st.write("This app perform valuation of a real estate in Kuala Lumpur based on its attributes and economic indicators from official sources (DOSM and BNM).")
     col1, col2 = st.columns(2)
     
     # Required
