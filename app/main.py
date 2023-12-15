@@ -74,17 +74,18 @@ with forecast_tab:
     # Optional
     with col2:
         st.subheader("Economic indicators")
-        st.write("Optional. Leave blank to use 2023 values.")
-        interest_rate = st.number_input(label="Enter interest rate (%)", min_value=0.0, value=3.0)
-        cpi = st.number_input(label="Enter consumer price index (2010=100)", value=123.08)
-        n_households = st.number_input(label="Enter number of households in KL", min_value=1, value=526_075)
-        mean_income = st.number_input(label="Enter mean income in KL (RM)", min_value=0.0, value=13_613.61)
-        median_income = st.number_input(label="Enter median income in KL (RM)", min_value=0.0, value=10_762.87)
-        wellbeing_index = st.number_input(label="Enter wellbeing index", min_value=0.0, value=122.15)
-        money_supply_millions = st.number_input(label="Enter money supply (millions)", min_value=0.0, value=2_040_993.0)
-        unemployment_rate = st.number_input(label="Enter unemployment rate (%)", min_value=0.0, value=3.5)
-        population_thousands = st.number_input(label="Enter population (thousands) in KL", min_value=1.0, value=2_000.0)
-        crime_rate = st.number_input(label="Enter crime rate in KL", min_value=0, value=846)
+
+        with st.expander("Optional. Leave unchanged to use 2023 values.", expanded=False):
+            interest_rate = st.number_input(label="Enter interest rate (%)", min_value=0.0, value=3.0)
+            cpi = st.number_input(label="Enter consumer price index (2010=100)", value=123.08)
+            n_households = st.number_input(label="Enter number of households in KL", min_value=1, value=526_075)
+            mean_income = st.number_input(label="Enter mean income in KL (RM)", min_value=0.0, value=13_613.61)
+            median_income = st.number_input(label="Enter median income in KL (RM)", min_value=0.0, value=10_762.87)
+            wellbeing_index = st.number_input(label="Enter wellbeing index", min_value=0.0, value=122.15)
+            money_supply_millions = st.number_input(label="Enter money supply (millions)", min_value=0.0, value=2_040_993.0)
+            unemployment_rate = st.number_input(label="Enter unemployment rate (%)", min_value=0.0, value=3.5)
+            population_thousands = st.number_input(label="Enter population (thousands) in KL", min_value=1.0, value=2_000.0)
+            crime_rate = st.number_input(label="Enter crime rate in KL", min_value=0, value=846)
 
         input_optional = {
             'cpi': [cpi],
