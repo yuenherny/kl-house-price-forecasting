@@ -53,3 +53,15 @@ def get_building_type(township):
 
 def get_tenure(township):
     return df_transactions.query(f"township == '{township}'")['tenure'].unique()
+
+
+def get_max_floors(township, building_type):
+    return int(df_transactions.query(
+        f"township == '{township}' and building_type == '{building_type}'"
+    )['floors'].max(numeric_only=True))
+
+
+def get_max_rooms(township, building_type):
+    return int(df_transactions.query(
+        f"township == '{township}' and building_type == '{building_type}'"
+    )['rooms'].max(numeric_only=True))

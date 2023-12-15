@@ -1,8 +1,10 @@
 import datetime as dt
+import dis
+from arrow import get
 import streamlit as st
 
 from src.about import get_about_section
-from src.helpers import get_township, get_building_type, get_tenure
+from src.helpers import get_township, get_building_type, get_tenure, get_max_floors, get_max_rooms
 from src.sarimax_forecast import plot_market_overview
 from src.mlp_forecast import plot_forecast_get_valuation
 
@@ -52,8 +54,19 @@ with forecast_tab:
         township = st.selectbox(label="Select township", options=get_township())
         building_type = st.selectbox(label="Select building type", options=get_building_type(township))
         tenure_type = st.selectbox(label="Select tenure type", options=get_tenure(township))
-        floors = st.slider(label="Select number of floors", min_value=1, max_value=5, value=1)
-        rooms = st.slider(label="Select number of rooms", min_value=1, max_value=20, value=3)
+
+        max_floors = get_max_floors(township, building_type)
+        if max_floors <= 1:
+            floors = st.slider(label="Select number of floors", min_value=0, max_value=1, value=1, disabled=True)
+        else:
+            floors = st.slider(label="Select number of floors", min_value=1, max_value=get_max_floors(township, building_type))
+
+        max_rooms = get_max_rooms(township, building_type)
+        if max_rooms <= 1:
+            rooms = st.slider(label="Select number of rooms", min_value=0, max_value=1, value=1, disabled=True)
+        else:
+            rooms = st.slider(label="Select number of rooms", min_value=1, max_value=get_max_rooms(township, building_type))
+
         land_area_sqft = st.number_input(label="Enter land area (sqft)", min_value=0.0, max_value=10_000.0, value=900.0)
         built_up_sqft = st.number_input(label="Enter built-up area (sqft)", min_value=0.0, max_value=10_000.0, value=900.0)
         date = st.date_input(label="Select date", value=dt.date(2023, 7, 31))
