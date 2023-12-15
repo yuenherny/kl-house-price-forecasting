@@ -20,7 +20,7 @@ with market_tab:
 
     with col1:
         in_sample_forecast_length = st.slider(
-            label="In-sample forecast length",
+            label="In-sample forecast length (months ahead)",
             min_value=1,
             max_value=36,
             value=12,
@@ -28,7 +28,7 @@ with market_tab:
 
     with col2:
         out_sample_forecast_length = st.slider(
-            label="Out-sample forecast length",
+            label="Out-sample forecast length (months ahead)",
             min_value=1,
             max_value=36,
             value=12,
@@ -58,7 +58,7 @@ with forecast_tab:
         built_up_sqft = st.number_input(label="Enter built-up area (sqft)", min_value=0.0, max_value=10_000.0, value=900.0)
         date = st.date_input(label="Select date", value=dt.date(2023, 7, 31))
 
-        forecast_length = st.slider(label="Select forecast length", min_value=1, max_value=36, value=12)
+        forecast_length = st.slider(label="Select forecast length (months ahead)", min_value=1, max_value=36, value=12)
 
         input_required = {
             'township': [township],
