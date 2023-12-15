@@ -44,15 +44,15 @@ def get_scaler(scaler_path):
 
 
 def get_township():
-    return df_transactions['township'].unique()
+    return df_transactions['township'].drop_duplicates().sort_values(ascending=True)
 
 
 def get_building_type(township):
-    return df_transactions.query(f"township == '{township}'")['building_type'].unique()
+    return df_transactions.query(f"township == '{township}'")['building_type'].drop_duplicates()
 
 
 def get_tenure(township):
-    return df_transactions.query(f"township == '{township}'")['tenure'].unique()
+    return df_transactions.query(f"township == '{township}'")['tenure'].drop_duplicates()
 
 
 def get_max_floors(township, building_type):
