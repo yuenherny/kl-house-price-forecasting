@@ -47,9 +47,9 @@ def get_township():
     return df_transactions['township'].unique()
 
 
-def get_building_type():
-    return df_transactions['building_type'].unique()
+def get_building_type(township):
+    return df_transactions.query(f"township == {township}")['building_type'].unique()
 
 
-def get_tenure():
-    return df_transactions['tenure'].unique()
+def get_tenure(township):
+    return df_transactions.query(f"township == {township}")['tenure'].unique()
