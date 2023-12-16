@@ -50,6 +50,8 @@ The data cleaning process is as follows:
 7. Investigate missing values in `built_up` and remove/impute
 8. Investigate missing values in `rooms` and remove/impute
 
+See the [03 - Data Cleaning 1](/notebooks/03%20-%20Data%20Cleaning%201.ipynb) and [04 - Data Cleaning 2](/notebooks/04%20-%20Data%20Cleaning%202.ipynb) notebook for implementation details.
+
 ### Data transformation
 
 ### Data integration with external information
@@ -62,19 +64,47 @@ This dataset is integrated with economic indicators as external information, for
 6. Population - DOSM
 7. Money supply - DOSM
 8. Unemployment rate - DOSM
-For more information of the data collection process, see the [ADR](/adr/0003-DATA%20COLLECTION%20OF%20ECONOMIC%20INDICATORS.md) for more info.
+
+However, there are missing values in the economic indicators dataset. Thus, the missing values are imputed using the Time-Weighted Extrapolation method, as practiced by the United Nations (Nia, 2017).
+
+See the [ADR](/adr/0003-DATA%20COLLECTION%20OF%20ECONOMIC%20INDICATORS.md) for more info and the [05 - Data Integration](/notebooks/05%20-%20Data%20Integration.ipynb) notebook for implementation details.
 
 ## 4 – Modelling
-Upon investigation, the collected data is a pooled time-series data.
-- Classical time series: ARIMA, SARIMA, Holt’s exponential smoothing
+Upon investigation, the collected data is a panel / pooled time-series data. However, due to its complexity, we will treat it as a time series data and a normal dataset. THis gives rise to three datasets:
+1. Univariate time series: Mean monthly `price_psf`
+2. Univariate time series: Median monthly `price_psf`
+3. Multivariate time series: The collected dataset as is and combined with other economic indicators
+
+Based on surveyed literature, the following models performed well in real estate price forecasting:
+- Classical time series: ARIMA, SARIMA, Holt’s exponential smoothing with blocked cross validation
 - Machine learning: Random forest, support vector, neural networks
-- Blocked cross validation
+
+See [06 - Time Series Modelling](/notebooks/06%20-%20Time%20Series%20%Modelling.ipynb) and [07 - ML Modelling](/notebooks/07%20-%20ML%20Modelling.ipynb) notebooks for implementation details.
 
 ## 5 – Evaluation
-- Metrics: MAE, MSE, RMSE, MAPE, R-squared
-- Best model is chosen using non-parametric tests: Friedman, Iman-Davenport, Nemenyi post-hoc, similar to Zhan et al. (2023)
+Based on surveyed literature, the following nine (9) evaluation methods were selected:
+1. Mean absolute error (MAE)
+2. Mean squared error (MSE)
+3. Root mean square error (RMSE)
+4. Mean absolute percentage error (MAPE)
+5. R-squared (R2)
+6. Max error (ME)
+7. Root mean squared log error (RMSLE)
+8. Mean poisson deviation (MPD)
+9. Mean gamma deviation (MGD)
+
+The best model is chosen using the following non-parametric tests, similar to Zhan et al. (2023): 
+1. Friedman test
+2. Iman-Davenport test
+3. Nemenyi post-hoc test
+
+See [06 - Time Series Modelling](/notebooks/06%20-%20Time%20Series%20%Modelling.ipynb) and [07 - ML Modelling](/notebooks/07%20-%20ML%20Modelling.ipynb) notebooks for implementation details.
 
 ## 6 – Deployment
-- Web app with easy-to-use UI
-- Hosted on Streamlit Community Cloud
-- CI/CD with GitHub-Streamlit integration
+The best model from each dataset will be deployed as a web app using Streamlit framework. The Streamlit framework was chosen due to the following considerations:
+1. Streamlit is a Python web app framework that is easy to use and deploy.
+2. Plotly charts which are interactive is supported by Streamlit framework.
+3. Python web apps can be deployed to Streamlit Community Cloud for free.
+4. Streamlit Community Cloud has integration with GitHub for CI/CD.
+
+See the [ADR](/adr/0006-WEB%20APP%20DEPLOYMENT.md) for more info, the [08 - Web App](/notebooks/08%20-Charts%20for%20Web%20App.ipynb) notebook for Plotly implementation details and the [main.py](/app/main.py) in `app` directory for web app implementation details.
