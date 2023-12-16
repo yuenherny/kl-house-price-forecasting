@@ -1,7 +1,7 @@
 # Research Methodology: CRISP-DM Method
 
 Date created: 4 Sep 2023
-Date revised: 7 Sep 2023
+Date revised: 7 Sep 2023, 16 Dec 2023
 
 Author(s): Yu Yuen Hern
 
@@ -108,3 +108,6 @@ The best model from each dataset will be deployed as a web app using Streamlit f
 4. Streamlit Community Cloud has integration with GitHub for CI/CD.
 
 See the [ADR](/adr/0006-WEB%20APP%20DEPLOYMENT.md) for more info, the [08 - Web App](/notebooks/08%20-Charts%20for%20Web%20App.ipynb) notebook for Plotly implementation details and the [main.py](/app/main.py) in `app` directory for web app implementation details.
+
+## References
+1. Zhan et al. (2023). A hybrid machine learning framework for forecasting house price. *Expert Systems with Applications*. Volume 233, 2023. https://doi.org/10.1016/j.eswa.2023.120981.
