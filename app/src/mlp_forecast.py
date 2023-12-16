@@ -70,6 +70,7 @@ def _plot_price_psf_forecast(combined_df, mean_monthly_price_psf, median_monthly
                 name=f'{type}'
             )
         )
+
     # Line plot for mean price
     fig.add_trace(
         go.Scatter(
@@ -119,10 +120,22 @@ def _plot_price_psf_forecast(combined_df, mean_monthly_price_psf, median_monthly
     return fig
 
 
-def _combine_historical_and_forecast(df_input_required: pd.DataFrame, forecast, n_latest=1_000):
-    township = df_input_required['township'].iloc[0]
+def _combine_historical_and_forecast(df_input_required: pd.DataFrame, forecast, show_similar: bool):
 
-    df_historical = df_transactions.query(f"township == '{township}'")[['date', 'price_psf']]
+    township = df_input_required['township'].iloc[0]
+    df_historical = df_transactions.query(f"township == '{township}'")
+    
+    if show_similar:  # Show only historical transactions of similar attributes
+        building_type = df_input_required['building_type'].iloc[0]
+        tenure = df_input_required['tenure'].iloc[0]
+        rooms = df_input_required['rooms'].iloc[0]
+        floors = df_input_required['floors'].iloc[0]
+
+        df_historical = df_transactions.query(
+            f"township == '{township}' and building_type == '{building_type}' and tenure == '{tenure}' and rooms == {rooms} and floors == {floors}"
+        )
+    
+    df_historical = df_historical[['date', 'price_psf']]
     df_historical['type'] = 'Historical'
 
     df_forecast = pd.DataFrame({'date': df_input_required['date'], 'price_psf': forecast}).reset_index(drop=True)
@@ -133,7 +146,7 @@ def _combine_historical_and_forecast(df_input_required: pd.DataFrame, forecast, 
 
     combined_df = pd.concat([df_historical, df_forecast], ignore_index=True)
 
-    return combined_df[-n_latest:]
+    return combined_df
 
 
 def _create_valuation_df(df_input_required, forecast):
@@ -144,7 +157,7 @@ def _create_valuation_df(df_input_required, forecast):
     return df_forecast
 
 
-def plot_forecast_get_valuation(input_required: dict, input_optional: dict, forecast_length=12, n_latest=10_000):
+def plot_forecast_get_valuation(input_required: dict, input_optional: dict, forecast_length: int, show_similar: bool):
     
     df_input_required = pd.DataFrame({**input_required})
     df_input_required = _expand_forecast_horizon(df_input_required, forecast_length)
@@ -154,7 +167,7 @@ def plot_forecast_get_valuation(input_required: dict, input_optional: dict, fore
     forecast = _forecast_price_psf(df_input)
 
     df_valuation = _create_valuation_df(df_input_required, forecast)
-    combined_df = _combine_historical_and_forecast(df_input_required, forecast, n_latest)
+    combined_df = _combine_historical_and_forecast(df_input_required, forecast, show_similar)
 
     figure = _plot_price_psf_forecast(combined_df, mean_monthly_price_psf, median_monthly_price_psf)
     df_valuation = _create_valuation_df(df_input_required, forecast)

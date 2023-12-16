@@ -69,6 +69,11 @@ with forecast_tab:
         built_up_sqft = st.number_input(label="Enter built-up area (sqft)", min_value=0.0, max_value=10_000.0, value=900.0)
         date = st.date_input(label="Select date", value=dt.date(2023, 7, 31))
 
+        show_similar = st.toggle(
+            label="Show only historical transactions similar to selected real estate attributes. May result in minimal or no historical data points.", 
+            value=False
+        )
+
         forecast_length = st.slider(label="Select forecast length (months ahead)", min_value=1, max_value=36, value=12)
 
         input_required = {
@@ -113,7 +118,7 @@ with forecast_tab:
 
     if st.button("ANN Forecast"):
         figure, df_valuation = plot_forecast_get_valuation(
-            input_required, input_optional, forecast_length
+            input_required, input_optional, forecast_length, show_similar
         )
 
         st.dataframe(df_valuation)
