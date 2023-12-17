@@ -8,8 +8,8 @@ Author(s): Yu Yuen Hern
 
 ## 1 – Business Understanding
 More details about business understanding or problem statement can be obtained from the report. The main points are:
-- Primary business objective: “Can future house prices be forecasted to determine whether a house will yield positive returns at the conclusion of its ownership period?” 
-- Data mining goal: “Forecasting the future value of the house in the next three months, given the house attributes and its transacted prices.”
+- Primary business objective: “Can future prices of a real estate be estimated for the next twelve months such that a purchase decision can be made?” 
+- Data mining goal: “Forecasting the future value of a real estate for the next twelve months, given the its attributes, transacted prices and economic climate.”
 - Success criterion: Swanson (2015) suggests forecast with MAPE < 25% is acceptable
 
 ## 2 – Data Understanding
