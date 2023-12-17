@@ -1,6 +1,7 @@
 # Scraping Data from Brickz.my
 
 Date created: 24 Aug 2023
+
 Date revised: TBD
 
 Author(s): Yu Yuen Hern
