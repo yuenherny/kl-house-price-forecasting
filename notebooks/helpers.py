@@ -21,6 +21,7 @@ DATA_DIR = ROOT_DIR / 'data'
 RAW_DATA_DIR = DATA_DIR / 'raw'
 TRANSFORMED_DATA_DIR = DATA_DIR / 'transformed'
 CACHE_DATA_DIR = DATA_DIR / 'cache'
+REPORTS_DATA_DIR = DATA_DIR / 'reports'
 
 ASSETS_DIR = ROOT_DIR / 'assets'
 CHARTS_DIR = ASSETS_DIR / 'plotly'
