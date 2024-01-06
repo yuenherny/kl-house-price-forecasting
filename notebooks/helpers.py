@@ -83,7 +83,17 @@ def cross_validation_with_pipeline(pipeline: Pipeline, X_train: np.ndarray, y_tr
 
     # Cross validate the train data
     if task == 'regression':
-        scoring = ('r2', 'neg_mean_squared_error',  'neg_root_mean_squared_error', 'neg_mean_absolute_percentage_error', 'neg_median_absolute_error')
+        scoring = (
+            'neg_mean_squared_error',
+            'neg_root_mean_squared_error',
+            'neg_mean_absolute_error',
+            'neg_mean_absolute_percentage_error',
+            'r2',
+            'max_error',
+            'neg_mean_squared_log_error',
+            'neg_mean_poisson_deviance',
+            'neg_mean_gamma_deviance'
+        )
     elif task == 'classification':
         scoring = ('accuracy', 'balanced_accuracy', 'f1', 'precision', 'recall', 'roc_auc')
     else:
@@ -107,3 +117,8 @@ def train_and_validate_model(pipeline: Pipeline, X_train: pd.Series, y_train: pd
     validate_impute(y_val, y_pred, task)
 
     return pipeline
+
+
+def root_mean_squared_log_error(y_true, y_pred):
+    """Function to calculate root mean squared log error."""
+    return np.sqrt(np.mean(np.power(np.log1p(y_pred) - np.log1p(y_true), 2)))
