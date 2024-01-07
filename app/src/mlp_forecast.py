@@ -32,11 +32,12 @@ def _process_dataframe(df_input_required: pd.DataFrame):
 
 def _expand_forecast_horizon(df_input_required: pd.DataFrame, forecast_length=12):
     start_date = df_input_required['date'].iloc[0]
-    forecast_length += get_months_difference(data_cutoff_date, start_date)
+    months_difference = get_months_difference(data_cutoff_date, start_date)
+    forecast_length += months_difference
 
     df_input_required = pd.concat([df_input_required] * forecast_length)
-    df_input_required['date'] = pd.date_range(start=start_date, periods=forecast_length, freq='MS')
-    return df_input_required
+    df_input_required['date'] = pd.date_range(start=data_cutoff_date, periods=forecast_length, freq='MS')
+    return df_input_required, months_difference
 
 
 def _encode_dataframe(df_input_required: pd.DataFrame, input_optional: dict):
@@ -125,7 +126,7 @@ def _plot_price_psf_forecast(combined_df, mean_monthly_price_psf, median_monthly
     return fig
 
 
-def _combine_historical_and_forecast(df_input_required: pd.DataFrame, forecast, show_similar: bool):
+def _combine_historical_and_forecast(df_input_required: pd.DataFrame, forecast, months_difference, show_similar: bool):
 
     township = df_input_required['township'].iloc[0]
     df_historical = df_transactions.query(f"township == '{township}'")
@@ -144,7 +145,7 @@ def _combine_historical_and_forecast(df_input_required: pd.DataFrame, forecast, 
     df_historical['type'] = 'Historical'
 
     df_forecast = pd.DataFrame({'date': df_input_required['date'], 'price_psf': forecast}).reset_index(drop=True)
-    df_forecast.loc[0, 'type'] = 'Current'
+    df_forecast.loc[:months_difference + 1, 'type'] = 'Current'
 
     if len(df_forecast) > 1:
         df_forecast.loc[1:, 'type'] = 'Future'
