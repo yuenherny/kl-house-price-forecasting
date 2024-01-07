@@ -31,7 +31,7 @@ def _process_dataframe(df_input_required: pd.DataFrame):
 
 
 def _expand_forecast_horizon(df_input_required: pd.DataFrame, forecast_length=12):
-    start_date = dt.strptime(df_input_required['date'].iloc[0], '%Y-%m-%d')
+    start_date = dt.datetime.strptime(df_input_required['date'].iloc[0], '%Y-%m-%d')
     forecast_length += get_months_difference(data_cutoff_date, start_date)
 
     df_input_required = pd.concat([df_input_required] * forecast_length)
