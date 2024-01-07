@@ -166,14 +166,14 @@ def _create_valuation_df(df_input_required, forecast):
 def plot_forecast_get_valuation(input_required: dict, input_optional: dict, forecast_length: int, show_similar: bool):
     
     df_input_required = pd.DataFrame({**input_required})
-    df_input_required = _expand_forecast_horizon(df_input_required, forecast_length)
+    df_input_required, months_difference = _expand_forecast_horizon(df_input_required, forecast_length)
 
     df_input_required = _process_dataframe(df_input_required)
     df_input, df_input_required = _encode_dataframe(df_input_required, input_optional)
     forecast = _forecast_price_psf(df_input)
 
     df_valuation = _create_valuation_df(df_input_required, forecast)
-    combined_df = _combine_historical_and_forecast(df_input_required, forecast, show_similar)
+    combined_df = _combine_historical_and_forecast(df_input_required, forecast, months_difference, show_similar)
 
     figure = _plot_price_psf_forecast(combined_df, mean_monthly_price_psf, median_monthly_price_psf)
     df_valuation = _create_valuation_df(df_input_required, forecast)
