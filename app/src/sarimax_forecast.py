@@ -6,8 +6,8 @@ from src.helpers import get_mean_median_monthly_price_psf
 
 mean_monthly_price_psf, median_monthly_price_psf = get_mean_median_monthly_price_psf()
 
-mean_sarimax_best_order = (2, 2, 4)
-median_sarimax_best_order = (3, 1, 1)
+mean_sarimax_best_order = (1, 2, 2)
+median_sarimax_best_order = (2, 2, 1)
 
 
 def _forecast_price_psf(data, order, in_sample_forecast_length=12, out_sample_forecast_length=12):
