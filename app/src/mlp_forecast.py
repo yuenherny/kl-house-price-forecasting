@@ -1,9 +1,11 @@
+import datetime as dt
 import pandas as pd
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 
 from src.helpers import (
-    MODEL_DIR, get_encoder, get_model, get_scaler, get_transactions, get_mean_median_monthly_price_psf
+    MODEL_DIR, get_encoder, get_model, get_scaler, get_transactions, get_mean_median_monthly_price_psf,
+    get_months_difference
 )
 
 encoder_path = MODEL_DIR / 'one_hot_encoder_township_building_type_tenure.joblib'
@@ -12,6 +14,7 @@ model_path = MODEL_DIR / 'mlp_10_lr001_iter100_forecasting.skops'
 
 df_transactions = get_transactions()
 mean_monthly_price_psf, median_monthly_price_psf = get_mean_median_monthly_price_psf()
+data_cutoff_date = dt.datetime(2023, 6, 31)
 
 
 def _process_dataframe(df_input_required: pd.DataFrame):
@@ -28,7 +31,9 @@ def _process_dataframe(df_input_required: pd.DataFrame):
 
 
 def _expand_forecast_horizon(df_input_required: pd.DataFrame, forecast_length=12):
-    start_date = df_input_required['date'].iloc[0]
+    start_date = dt.strptime(df_input_required['date'].iloc[0], '%Y-%m-%d')
+    forecast_length += get_months_difference(data_cutoff_date, start_date)
+
     df_input_required = pd.concat([df_input_required] * forecast_length)
     df_input_required['date'] = pd.date_range(start=start_date, periods=forecast_length, freq='MS')
     return df_input_required

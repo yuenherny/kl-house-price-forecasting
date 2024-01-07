@@ -67,7 +67,7 @@ with forecast_tab:
 
         land_area_sqft = st.number_input(label="Enter land area (sqft)", min_value=0.0, max_value=10_000.0, value=900.0)
         built_up_sqft = st.number_input(label="Enter built-up area (sqft)", min_value=0.0, max_value=10_000.0, value=900.0)
-        date = st.date_input(label="Select date", value=dt.date(2023, 7, 31))
+        date = st.date_input(label="Select date", value=dt.date.today())
 
         show_similar = st.toggle(
             label="Show only historical transactions similar to selected real estate attributes. May result in minimal or no historical data points.", 
