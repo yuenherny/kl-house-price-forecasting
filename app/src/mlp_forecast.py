@@ -14,7 +14,7 @@ model_path = MODEL_DIR / 'mlp_10_lr001_iter100_forecasting.skops'
 
 df_transactions = get_transactions()
 mean_monthly_price_psf, median_monthly_price_psf = get_mean_median_monthly_price_psf()
-data_cutoff_date = dt.datetime(2023, 6, 31)
+data_cutoff_date = dt.datetime(2023, 6, 30)
 
 
 def _process_dataframe(df_input_required: pd.DataFrame):
