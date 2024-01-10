@@ -1,7 +1,7 @@
 # Missing Value Imputation
 
-## Experimented models
-The models we experimented are:
+## Experimented techniques
+The techniques we experimented are:
 1. Random forest
 2. KNN
 3. Bayesian ridge

@@ -1,7 +1,7 @@
 # Outlier Detection
 
-## Experimented models
-The models we experimented are:
+## Experimented techniques
+The techniques we experimented are:
 1. DBSCAN
 2. HDBSCAN
 3. OneClassSVM
