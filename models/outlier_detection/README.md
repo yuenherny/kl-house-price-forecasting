@@ -1,4 +1,4 @@
-# Outlier Detection Models
+# Outlier Detection
 
 ## Experimented models
 The models we experimented are:
