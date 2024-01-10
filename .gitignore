@@ -162,5 +162,12 @@ cython_debug/
 # VSCode
 .vscode/
 
-# Models
-models/
+# Large models
+rf_forecasting_pipeline.skops
+rf_multi_imputer.joblib
+rf_pipeline_built_up.joblib
+rf_pipeline_rooms.skops
+bayesianridge_multi_imputer.joblib
+
+# Archived models
+archive/
