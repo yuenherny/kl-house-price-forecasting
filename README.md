@@ -1,4 +1,4 @@
-# Time Series Forecasting: House Prices in Klang Valley, Malaysia
+# Time Series Forecasting: House Prices in Kuala Lumpur, Malaysia
 
 ## Course Info
 Name: Data Science Master's Project
@@ -20,4 +20,6 @@ Title: Real Estate Price Forecasting for Purchase Decision Making
 The app is available at https://kl-real-estate-price-forecasting.streamlit.app/
 
 # Disclaimer
-This is still under development. Author(s) will not be liable for any damages incurred due to the use of this project.
+By using this project in any means e.g. clone, fork, modify, deploy, you agree to the following terms and conditions:
+- This is an academic project and not tested for commercial use. The author(s) will not be liable for any damages incurred due to the use of this project.
+- The data is up to date as of 19 June 2023. The author(s) will not be liable for any damages incurred due to the use of outdated data.
