@@ -17,7 +17,7 @@ Title: Real Estate Price Forecasting for Purchase Decision Making
 7. `assets`: Image assets
 
 ## Web App
-The app is available at https://kl-real-estate-price-forecasting.streamlit.app/
+The app is available at https://kl-house-price-forecasting.streamlit.app/
 
 # Disclaimer
 By using this project in any means e.g. clone, fork, modify, deploy, you agree to the following terms and conditions:
