@@ -1,5 +1,5 @@
 category_encoders
-numpy
+numpy<2
 pandas
 plotly
 pyarrow

@@ -1,7 +1,7 @@
 autorank
 category_encoders
 kaleido
-numpy
+numpy<2
 notebook
 matplotlib
 pandas
