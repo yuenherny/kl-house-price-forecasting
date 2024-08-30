@@ -31,14 +31,14 @@ def get_encoder(encoder_path):
 
 def get_model(model_path):
     if os.path.exists(model_path):
-        return sio.load(model_path, trusted=True)
+        return sio.load(model_path, trusted=sio.get_untrusted_types(file=model_path))
     else:
         raise Exception(f'ML model not found at {model_path}')
 
 
 def get_scaler(scaler_path):
     if os.path.exists(scaler_path):
-        return sio.load(scaler_path, trusted=True)
+        return sio.load(scaler_path, trusted=sio.get_untrusted_types(file=scaler_path))
     else:
         raise Exception(f'Scaler not found at {scaler_path}')
 
