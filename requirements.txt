@@ -9,7 +9,7 @@ plotly
 pyarrow
 openpyxl
 selenium
-skops==0.8.0
+skops
 scikit-learn
 statsmodels
 streamlit
