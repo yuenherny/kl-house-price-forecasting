@@ -3,7 +3,7 @@ numpy<2
 pandas
 plotly
 pyarrow
-skops==0.8.0
+skops
 scikit-learn
 statsmodels
 streamlit
